@@ -43,4 +43,4 @@ class timeit():
             current_test_item_list.pop(0)
 
         with open('../result/result.json','w',encoding='utf-8') as f:
-            f.write(json.dumps(prev_results))
+            f.write(json.dumps(prev_results, indent=2))
