@@ -1,6 +1,7 @@
 # This program
 pyston*
 python-extension/script/*.txt
+chrome*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
