@@ -2,6 +2,7 @@ psutil==5.8.0
 pandas==1.2.1
 requests==2.25.1
 beautifulsoup4==4.9.3
+lxml
 pipeit==0.1.5
 Pillow==8.1.0
 selenium==3.141.0
