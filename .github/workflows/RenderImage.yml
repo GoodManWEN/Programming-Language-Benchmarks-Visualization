@@ -52,7 +52,7 @@ jobs:
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Action[Bot]"
         git add -A
-        git commit -m "Update latest score"
+        git commit -m "[`date +\"%Y-%m-%d\"`] Render latest image"
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
