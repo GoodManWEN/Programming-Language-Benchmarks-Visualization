@@ -104,8 +104,10 @@ jobs:
     - name: Add version mark
       working-directory: python-extension/result
       run: |
-        lsb_release > version.txt
-        uname >> version.txt
+        sudo apt update
+        sudo apt install lsb-release -y
+        lsb_release -a > version.txt
+        uname -a >> version.txt
         python -V >> version.txt
         pypy -V >> version.txt
         pyston -V >> version.txt
