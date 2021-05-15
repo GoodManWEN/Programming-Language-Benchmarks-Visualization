@@ -1,4 +1,4 @@
-const raw_data = JSON.parse('[["C++ g++", 1.0, 1.0], ["Rust", 1.04, 2.0], ["C gcc", 1.17, 3.0], ["C# .NET", 2.03, 6.0], ["Intel Fortran", 2.5, 4.0], ["F# .NET", 2.58, 8.0], ["Ada 2012 GNAT", 2.77, 5.0], ["Java", 2.78, 9.0], ["Haskell GHC", 2.98, 7.0], ["Chapel", 3.11, 10.0], ["Julia", 3.16, 13.0], ["Go", 3.46, 12.0], ["Node js", 3.89, 14.0], ["Free Pascal", 4.22, 11.0], ["OCaml", 5.84, 17.0], ["Lisp SBCL", 6.13, 15.0], ["Swift", 6.46, 16.0], ["Racket", 9.4, 18.0], ["Dart", 13.25, 20.0], ["PHP", 13.34, 19.0], ["Pypy", 19.23, 22.0], ["Pyston", 37.11, 24.0], ["Erlang", 54.14, 21.0], ["Python 3", 71.36, 27.0], ["VW Smalltalk", 71.77, 25.0], ["Lua", 76.86, 23.0], ["Perl", 80.01, 26.0], ["Ruby", 85.4, 28.0]]')
+const raw_data = JSON.parse('[["C++ g++", 1.0, 1.0], ["Rust", 1.04, 2.0], ["C gcc", 1.17, 3.0], ["C# .NET", 2.03, 6.0], ["Intel Fortran", 2.5, 4.0], ["F# .NET", 2.58, 8.0], ["Ada 2012 GNAT", 2.77, 5.0], ["Java", 2.78, 9.0], ["Haskell GHC", 2.98, 7.0], ["Chapel", 3.11, 10.0], ["Julia", 3.16, 13.0], ["Go", 3.46, 12.0], ["Node js", 3.89, 14.0], ["Free Pascal", 4.23, 11.0], ["OCaml", 5.84, 17.0], ["Lisp SBCL", 6.13, 15.0], ["Swift", 6.46, 16.0], ["Racket", 9.4, 18.0], ["Dart", 13.25, 20.0], ["PHP", 13.34, 19.0], ["Pypy", 18.6, 22.0], ["Pyston", 37.32, 24.0], ["Erlang", 54.13, 21.0], ["Python 3", 71.36, 27.0], ["VW Smalltalk", 71.75, 25.0], ["Lua", 76.85, 23.0], ["Perl", 80.02, 26.0], ["Ruby", 85.39, 28.0]]')
 const render_date = '2021-05-15'
 const container = document.getElementById('main')
 container.style.width="1080px"
@@ -20,6 +20,7 @@ let option = {
         fontFamily: "Arial",
         fontSize: 23,
       },
+      top: "4px",
       left: '50%',
       textAlign: "center",
       subtextStyle: {
