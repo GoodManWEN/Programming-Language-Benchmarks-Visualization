@@ -32,9 +32,9 @@ jobs:
         sudo apt install ./pyston_2.2*.deb
     - name: Install dependencies
       run: |
-        python -m pip install -r requirements.txt
-        pypy -m pip install -r requirements.txt
-        pyston -m pip install -r requirements.txt    
+        python -m pip install psutil==5.8.0
+        pypy -m pip install psutil==5.8.0
+        pyston -m pip install psutil==5.8.0    
     - name: Test binary-trees
       working-directory: python-extension/script
       run: |
