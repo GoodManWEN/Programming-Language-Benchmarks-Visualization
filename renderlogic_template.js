@@ -20,6 +20,7 @@ let option = {
         fontFamily: "Arial",
         fontSize: 23,
       },
+      top: "4px",
       left: '50%',
       textAlign: "center",
       subtextStyle: {
