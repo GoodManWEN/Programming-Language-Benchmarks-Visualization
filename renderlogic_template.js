@@ -29,6 +29,7 @@ let option = {
     },
     {
       text: "Data source from benchmarksgame-team.pages.debian.net\nRender by GoodManWEN/Programming-Language-Benchmarks-Visualization.git",
+      link: "https://github.com/GoodManWEN/Programming-Language-Benchmarks-Visualization",
       textStyle: {
         fontStyle: "normal",
         fontFamily: "Arial",
