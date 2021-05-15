@@ -9,7 +9,7 @@
 Benchmarks data & source codes come from 
 [the computer language benchmarks game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html).
 
-This project relies on github actions and will be updated weekly with the latest data and render them into visualizations.
+This project relies on github actions and will be updated weekly with the latest data and render them into visualizations. In addition to images, you can also visit [https://goodmanwen.github.io/Programming-Language-Benchmarks-Visualization/](https://goodmanwen.github.io/Programming-Language-Benchmarks-Visualization/) for live demo.
 
 For the author's interest, this project adds additional benchmarks for Python's jit interpreters such as [Pypy](https://pypy.org) and [Pyston](https://github.com/pyston/pyston)
 
