@@ -37,7 +37,7 @@ jobs:
       run: |
         cat bin/google* > chrome.deb
         sudo dpkg -i chrome.deb
-        cat bin/chrome* > chromedriver
+        cat bin/d-chrome* > chromedriver
     - name: Render
       run: |
         python update_and_render.py
