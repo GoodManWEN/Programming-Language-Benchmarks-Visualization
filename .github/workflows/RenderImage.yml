@@ -41,6 +41,12 @@ jobs:
     - name: Render
       run: |
         python update_and_render.py
+    - name: Compress
+      run: |
+        sudo apt update 
+        sudo apt install pngquant -y
+        pngquant --quality 65-85 --strip --speed 1 ranking.png --output ranking_compressed.png --force
+        mv ranking_compressed.png ranking.png
     - name: Commit files
       run: |
         git config --local user.email "actions@github.com"
