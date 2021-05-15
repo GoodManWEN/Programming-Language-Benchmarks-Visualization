@@ -224,7 +224,7 @@ def webkit_render_images():
     options.add_argument("headless")
     driver = webdriver.Chrome(options=options)
 
-    html_path = "file://" + os.path.abspath('./index.html')
+    html_path = "file://" + os.path.abspath('./docs/index.html')
     driver.get(html_path)
     time.sleep(2)
     SNAPSHOT_JS = """
