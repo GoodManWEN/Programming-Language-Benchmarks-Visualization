@@ -108,7 +108,7 @@ def get_local_extended_results():
         this_language_result_list = []
         for test_name, test_results in value["items"].items():
             # for each test
-            trimed = test_results[-5:]
+            trimed = test_results[-10:]
             output_result_dict = {"test_name": test_name, "language": label}
             output_result_dict["secs"] = sum(trimed | Map(lambda x: round(x["time"],2))) / len(trimed)
             output_result_dict["mem"] = int(sum(trimed | Map(lambda x: x["mem"] )) / len(trimed) / 1024 + 0.5)
