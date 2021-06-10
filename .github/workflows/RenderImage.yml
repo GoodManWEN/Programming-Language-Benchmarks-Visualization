@@ -33,11 +33,14 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Install Chrome
-      run: |
-        cat bin/google* > chrome.deb
-        sudo dpkg -i chrome.deb
-        cat bin/d-chrome* > chromedriver
+#     - name: Install Chrome
+#       run: |
+#        sudo rm -rf ~/.config/google-chrome
+#        sudo apt-get update
+#        sudo apt-get remove google-chrome-stable chromium-driver
+#        cat bin/google* > chrome.deb
+#        sudo dpkg -i chrome.deb
+#        cat bin/d-chrome* > chromedriver
     - name: Render
       run: |
         python update_and_render.py
