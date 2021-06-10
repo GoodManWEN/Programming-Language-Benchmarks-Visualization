@@ -18,7 +18,7 @@ from selenium import webdriver
 # pd.set_option('display.max_rows',None)
 # pd.set_option('display.max_columns',None)
 # pd.set_option('display.width',1000)
-constant_L = 5
+constant_L = 8
 
 def reliable_fetch(url):
     loopnum = 0
