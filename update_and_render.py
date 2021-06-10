@@ -18,6 +18,7 @@ from selenium import webdriver
 # pd.set_option('display.max_rows',None)
 # pd.set_option('display.max_columns',None)
 # pd.set_option('display.width',1000)
+constant_L = 5
 
 def reliable_fetch(url):
     loopnum = 0
@@ -166,8 +167,8 @@ def compute_language_ordered_value(
     # A simple algorithm to adjust the weights so that extreme values are less influential
     min_line = frame.min()
     wdight_function_map = {
-        1: lambda x: x.std().apply(lambda x: math.e**(- math.sqrt(x) / 10)),  # The greater the dispersion, the smaller the weight
-        2: lambda x: x.mean().apply(lambda x: math.e**(- math.sqrt(x) / 10)),  # The greater the mean, the smaller the weight
+        1: lambda x: x.std().apply(lambda x: math.e**(- math.sqrt(x) / constant_L)),  # The greater the dispersion, the smaller the weight
+        2: lambda x: x.mean().apply(lambda x: math.e**(- math.sqrt(x) / constant_L)),  # The greater the mean, the smaller the weight
         3: lambda x: x.mean().apply(lambda x: 1),   # normal mean
     }
     std_weight = wdight_function_map[weight_mode](frame)
