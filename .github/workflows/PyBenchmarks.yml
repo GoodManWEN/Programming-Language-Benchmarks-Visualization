@@ -28,8 +28,8 @@ jobs:
         python-version: '3.9'
     - name: Set up Pyston2.2
       run: |
-        wget https://github.com/pyston/pyston/releases/download/pyston_2.2/pyston_2.2_20.04.deb
-        sudo apt install ./pyston_2.2*.deb
+        wget https://github.com/pyston/pyston/releases/download/v2.3/pyston_2.3_20.04.deb
+        sudo apt install ./pyston_2.*.deb
     - name: Install dependencies
       run: |
         python -m pip install psutil==5.8.0
