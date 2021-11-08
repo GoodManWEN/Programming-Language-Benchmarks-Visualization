@@ -28,7 +28,7 @@ jobs:
         python-version: '3.9'
     - name: Set up Pyston2.2
       run: |
-        wget https://github.com/pyston/pyston/releases/download/v2.3/pyston_2.3_20.04.deb
+        wget https://github.com/pyston/pyston/releases/download/pyston_2.3.1/pyston_2.3.1_20.04.deb
         sudo apt install ./pyston_2.*.deb
     - name: Install dependencies
       run: |
