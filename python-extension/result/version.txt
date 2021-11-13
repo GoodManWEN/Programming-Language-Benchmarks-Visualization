@@ -2,8 +2,8 @@ Distributor ID:	Ubuntu
 Description:	Ubuntu 20.04.3 LTS
 Release:	20.04
 Codename:	focal
-Linux fv-az186-334 5.11.0-1020-azure #21~20.04.1-Ubuntu SMP Mon Oct 11 18:54:28 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
-Python 3.9.7
+Linux fv-az177-866 5.11.0-1020-azure #21~20.04.1-Ubuntu SMP Mon Oct 11 18:54:28 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+Python 3.9.8
 Python 3.7.12 (44db26267d0a, Oct 24 2021, 14:21:50)
 [PyPy 7.3.7 with GCC 7.3.1 20180303 (Red Hat 7.3.1-5)]
 Python 3.8.12 (heads/pyston_master:fc1a0ba600, Sep 20 2021, 15:46:12)
