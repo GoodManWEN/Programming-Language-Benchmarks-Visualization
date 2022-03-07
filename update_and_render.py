@@ -33,8 +33,9 @@ def reliable_fetch(url):
     return data.text
 
 def get_test_results_from_website():
+    uri = 'https://benchmarksgame-team.pages.debian.net/benchmarksgame/'
     try:
-        data = reliable_fetch('https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html')
+        data = reliable_fetch(f'{uri}/index.html')
     except:
         raise RuntimeError("Error fetching web information.")
         sys.exit(1)
@@ -54,6 +55,8 @@ def get_test_results_from_website():
         # for each programming language
         tag_href = atag.get("href")
         tag_name = atag.text
+        if './' in tag_href:
+            tag_href = tag_href.replace('./', uri)
         language_tested = reliable_fetch(tag_href)
         soup_tested = BeautifulSoup(language_tested, "lxml").find('table')
         this_language_result_list = []
