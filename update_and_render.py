@@ -61,7 +61,7 @@ def get_test_results_from_website():
         soup_tested = BeautifulSoup(language_tested, "lxml").find('table')
         this_language_result_list = []
         for single_result in soup_tested.find_all('tbody'):
-            if len(single_result.find_all('td')) == 12:
+            if len(single_result.find_all('td')):
                 # for each test
                 current_test_name = ''
                 for single_result_line in single_result.find_all('tr'):
@@ -77,24 +77,25 @@ def get_test_results_from_website():
                             scan_name = "Node"
                         if scan_name in single_result_line.text:
                             it = single_result_line.find_all('td')
-                            legal = False
-                            for check_item in it:
-                                if check_item.get('class') in ('message', 'best'):
-                                    legel = True; break
-                            if not legal:
-                                continue
+                            
                             if len(it) != 6:
+                                continue
                                 raise RuntimeError("Item line td number not equal to 5, may have some change in website.")
                             it = iter(it)
                             treat = lambda x: x.replace('\xa0',' ').replace(',','').strip()
-                            output_result_dict = {'test_name': treat(current_test_name)}
-                            output_result_dict['language'] = treat(next(it).text)
-                            output_result_dict['secs'] = float(treat(next(it).text))
-                            output_result_dict['mem'] = int(treat(next(it).text))
-                            output_result_dict['gz'] = int(treat(next(it).text))
-                            output_result_dict['busy'] = float(treat(next(it).text))
-                            output_result_dict['cpu load'] = treat(next(it).text)
-                            this_language_result_list.append(output_result_dict)
+                            try:
+                                output_result_dict = {'test_name': treat(current_test_name)}
+                                output_result_dict['language'] = treat(next(it).text)
+                                re_res = re.search("#[\d]+", output_result_dict['language'])
+                                if re_res:
+                                    output_result_dict['language'] = output_result_dict['language'][:re_res.start()].strip()
+                                output_result_dict['mem'] = int(treat(next(it).text))
+                                output_result_dict['gz'] = int(treat(next(it).text))
+                                output_result_dict['secs'] = float(treat(next(it).text))
+                                this_language_result_list.append(output_result_dict)
+                            except:
+                                # Bad Output/Make Fail
+                                continue
         else:
             if len(this_language_result_list) > 0:
                 full_language_result_list.append(this_language_result_list)
