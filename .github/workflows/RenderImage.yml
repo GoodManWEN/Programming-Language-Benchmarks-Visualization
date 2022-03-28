@@ -5,7 +5,7 @@ name: Render Image
 
 on:
   schedule:
-    - cron:  '0 9 * * 1'  # Runs at 03:00 UTC on Mon.
+    - cron:  '0 9 * * 3'  # Runs at 03:00 UTC on Mon.
 
   workflow_dispatch: 
   
