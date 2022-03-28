@@ -77,10 +77,9 @@ def get_test_results_from_website():
                             scan_name = "Node"
                         if scan_name in single_result_line.text:
                             it = single_result_line.find_all('td')
-                            
-                            if len(it) != 6:
+                            if len(it) != 4: #
                                 continue
-                                raise RuntimeError("Item line td number not equal to 5, may have some change in website.")
+                                raise RuntimeError("Item line td number not equal to 4, may have some change in website.")
                             it = iter(it)
                             treat = lambda x: x.replace('\xa0',' ').replace(',','').strip()
                             try:
