@@ -77,6 +77,12 @@ def get_test_results_from_website():
                             scan_name = "Node"
                         if scan_name in single_result_line.text:
                             it = single_result_line.find_all('td')
+                            legal = False
+                            for check_item in it:
+                                if check_item.get('class') in ('message', 'best'):
+                                    legel = True; break
+                            if not legal:
+                                continue
                             if len(it) != 6:
                                 raise RuntimeError("Item line td number not equal to 5, may have some change in website.")
                             it = iter(it)
