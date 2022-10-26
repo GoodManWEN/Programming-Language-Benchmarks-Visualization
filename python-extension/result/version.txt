@@ -2,8 +2,8 @@ Distributor ID:	Ubuntu
 Description:	Ubuntu 20.04.5 LTS
 Release:	20.04
 Codename:	focal
-Linux fv-az246-354 5.15.0-1020-azure #25~20.04.1-Ubuntu SMP Thu Sep 1 19:20:56 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
-Python 3.9.14
+Linux fv-az554-932 5.15.0-1022-azure #27~20.04.1-Ubuntu SMP Mon Oct 17 02:03:50 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+Python 3.9.15
 Python 3.7.13 (7e0ae751533460d5f89f3ac48ce366d8642d1db5, Mar 29 2022, 06:03:31)
 [PyPy 7.3.9 with GCC 10.2.1 20210130 (Red Hat 10.2.1-11)]
 Python 3.8.12 (heads/pyston_master:fc1a0ba600, Sep 20 2021, 15:46:12)
