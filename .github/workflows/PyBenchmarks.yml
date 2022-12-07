@@ -17,16 +17,16 @@ jobs:
     runs-on: ubuntu-latest
         
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Pypy3.9
-      uses: actions/setup-python@v4
+    - uses: actions/checkout@v2
+    - name: Set up Pypy3.7
+      uses: actions/setup-python@v2
       with:
-        python-version: 'pypy-3.9'
-    - name: Set up Python3.10
-      uses: actions/setup-python@v4
+        python-version: 'pypy-3.7'
+    - name: Set up Python3.9
+      uses: actions/setup-python@v2
       with:
-        python-version: '3.10'
-    - name: Set up Pyston2.2
+        python-version: '3.9'
+    - name: Set up Pyston2.3
       run: |
         wget https://github.com/pyston/pyston/releases/download/pyston_2.3.5/pyston_2.3.5_20.04.deb
         sudo apt install ./pyston_2.*.deb
