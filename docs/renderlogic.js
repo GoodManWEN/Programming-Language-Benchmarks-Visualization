@@ -1,5 +1,5 @@
 const raw_data = JSON.parse('[["C gcc", 1.0, 1.0], ["C++ g++", 1.09, 2.0], ["Rust", 1.17, 3.0], ["C# .NET", 2.17, 6.0], ["Classic Fortran", 2.58, 4.0], ["Julia", 2.6, 10.0], ["Chapel", 2.61, 5.0], ["Ada 2012 GNAT", 2.87, 7.0], ["Haskell GHC", 2.99, 9.0], ["F# .NET", 3.34, 12.0], ["Go", 3.35, 8.0], ["OCaml", 3.58, 14.0], ["Java", 3.67, 13.0], ["Free Pascal", 4.25, 11.0], ["Node js", 4.68, 17.0], ["Lisp SBCL", 5.56, 16.0], ["Swift", 6.1, 15.0], ["Dart", 6.42, 18.0], ["Racket", 7.54, 20.0], ["PHP", 12.99, 19.0], ["Pypy", 21.82, 22.0], ["Erlang", 34.3, 23.0], ["Pyston", 37.15, 21.0], ["Ruby", 38.31, 26.0], ["VW Smalltalk", 41.13, 27.0], ["Lua", 46.71, 24.0], ["Perl", 69.45, 28.0], ["Python 3", 72.53, 25.0]]')
-const render_date = '2022-12-14'
+const render_date = '2022-12-21'
 const container = document.getElementById('main')
 container.style.width="1080px"
 container.style.height= raw_data.length * 48 + "px"
